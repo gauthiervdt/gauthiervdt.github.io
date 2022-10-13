@@ -85,3 +85,9 @@ h1{
 header>div>div:nth-of-type(1)>a>img{
 	height: 8rem;
 }
+main>img{
+	display: inline-block;
+}
+main>p{
+	display: inline-block;
+}
