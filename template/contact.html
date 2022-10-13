@@ -22,7 +22,7 @@
                 // generate a five digit number for the contact_number variable
                 document.querySelector('input[name=contact_number]').value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('service_2ck0rf6', 'contact_form', document.getElementById("contact_form"))
+                emailjs.sendForm('service_2ck0rf6', 'template_4v14ync', document.getElementById("contact_form"))
                     .then(function() {
                         console.log('SUCCESS!');
                     }, function(error) {
