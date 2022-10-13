@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="../css/style.css"> 
 	<link rel="stylesheet" href="../css/style_contact.css">
     <title>Gauthier Vadot</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('PdMpteGFhA3x4-Y2f');
+        })();
+    	</script>
+    	<script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
 <div>
@@ -65,7 +88,7 @@
 						</span>
                     </div>
 
-                    <form action="" class="contact__form">
+                    <form action="" id="contact" class="contact__form">
                         <div class="contact__inputs">
                             <input type="text" placeholder="Nom" class="contact__input">
                             <input type="mail" placeholder="Email" class="contact__input">
