@@ -1,0 +1,89 @@
+main{
+    padding-top: 25vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 15vh;
+    color:black;
+}
+
+
+/* tourner */
+
+body>div:nth-of-type(1){
+	display: none;
+}
+body>div:nth-of-type(1)>svg{
+	margin-left: 35%;
+	margin-top: 50%;
+}
+@media (min-width: 428px), (max-width:500px), screen and (orientation: portrait){
+    body>div:nth-of-type(1){
+		display: initial;
+
+		position: fixed;
+		z-index: 40;
+		width: 100vw;
+		height: 100vh;
+		bottom: 0;
+		background-color: white;
+	}
+	body>div:nth-of-type(1)>h1{
+		font-size:medium;
+		margin-top: 20%;
+		margin-left: 5%;
+	}
+}
+@media (min-width: 800px), (max-width:900px), screen and (orientation: portrait){
+    body>div:nth-of-type(1){
+		display: initial;
+		position: fixed;
+		z-index: 40;
+		width: 100vw;
+		height: 100vh;
+		bottom: 0;
+		background-color: white;
+	}
+	body>div:nth-of-type(1)>h1{
+		margin-top: 10%;
+		margin-left: 35%;
+		font-size:large;
+	}
+}
+
+@media (min-width: 1200px), screen and (orientation: landscape){
+    body>div:nth-of-type(1){
+		display: none;
+	}
+}
+
+.phone {
+	position: relative;
+	width: 30%; 
+}
+.phone--landscape {
+	animation: landscape 1s 1s forwards;
+}
+  
+.phone--portrait {
+	transform: rotate(90deg);
+	animation: portrait 1s 1s forwards;
+}
+  
+
+@keyframes landscape {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(90deg) }
+  }
+  
+@keyframes portrait {
+	0% { transform: rotate(90deg) }
+	100% { transform: rotate(0deg) }
+}
+
+h1{
+	text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
+	color: white;
+}
+h3{
+	color: #5361FF;
+}
