@@ -25,6 +25,7 @@
                 emailjs.sendForm('service_2ck0rf6', 'template_4v14ync', document.getElementById("contact_form"))
                     .then(function() {
                         console.log('SUCCESS!');
+			this.reset();
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
