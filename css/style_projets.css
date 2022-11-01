@@ -348,6 +348,12 @@ main>section>div:nth-of-type(4)>div:nth-of-type(2){
 main>section>div:nth-of-type(4)>div:nth-of-type(2)>img{
   margin-top: 6vh;
 }
+main>section>div:nth-of-type(4)>div:nth-of-type(3){
+  background-color: #383531;
+}
+main>section>div:nth-of-type(4)>div:nth-of-type(3)>img{
+  margin-top: 9vh;
+}
 
 /* Description PAGE BLANCHE*/
 
@@ -559,6 +565,9 @@ body>div:nth-of-type(5)>div>div>a{
   }
   main>section>div:nth-of-type(4){
     padding-bottom: 0;
+  }
+  main>section{
+      margin-bottom: 40vh;
   }
 
 /* LOGO*/
